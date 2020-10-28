@@ -40,3 +40,5 @@ console.log(stack.peek());
 
 
 console.log(stack.toString());
+
+//Challenge: describe how you could use a single array to implement three stacks.
