@@ -34,7 +34,7 @@ class Queue {
         let currentHead = this.head
         this.head = this.head.next
         this.length--
-        return currentHead
+        return currentHead.value
     }
 
     isEmpty() {
@@ -43,7 +43,7 @@ class Queue {
 
     peek() {
         if(this.length > 0) {
-            return this.head
+            return this.head.value
         }
         return undefined
     }
