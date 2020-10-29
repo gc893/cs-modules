@@ -1,10 +1,20 @@
 class Stack {
     constructor() {
         this.items = [];
+        this.min = null;
     }
 
     push(element) {
         this.items.push(element);
+        
+        //New Code
+        if (this.min) {
+            if(element < this.min){
+                this.min = element;
+            }
+        } else {
+            this.min = element;
+        }
     }
 
     pop() {
@@ -12,21 +22,13 @@ class Stack {
         return this.items.pop();
     }
 
-    peek() {
-        return this.items[this.items.length -1];
-    }
-
-    size() {
-        return this.items.length;
-    }
-
-    isEmpty() {
-        return !this.items.length;
+    //New Code
+    minVal() {
+        return this.min;
     }
 
     toString() {
         return this.items.join('-');
-        // return this.items.reverse().join('->');
     }
 }
 
@@ -34,9 +36,9 @@ let stack = new Stack();
 
 stack.push(1);
 stack.push(2);
-stack.push(3);
-stack.pop();
-console.log(stack.peek());
+stack.push(0);
+// stack.pop();
+console.log(stack.minVal());
 
 
 console.log(stack.toString());
