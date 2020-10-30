@@ -1,3 +1,6 @@
+//This implementation can be simplified by not saving the reversed version of the stack and simply by setting up a pointer indicating the next item to pop
+//using pointers, the popped elements on the items array that have already been marked as popped can be overwritten when pushing to use this spaces as well. 
+
 class Stack {
     constructor() {
         this.items = [];
