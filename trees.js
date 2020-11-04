@@ -20,7 +20,6 @@ class tree {
                 let node = new treeNode(val);
                 prevNode.left = node
             } else {
-                // console.log(prevNode.left)
                 this.addNode(val, prevNode.left)
             }
         } else if (val > prevNode.value) {
@@ -28,7 +27,6 @@ class tree {
                 let node = new treeNode(val);
                 prevNode.right = node
             } else {
-                // console.log(prevNode.right)
                 this.addNode(val, prevNode.right)
             }
         } else {
@@ -43,6 +41,5 @@ newTree.addNode(7);
 newTree.addNode(6);
 newTree.addNode(2);
 newTree.addNode(8);
-
 
 console.log(JSON.stringify(newTree, null, '\t'))
