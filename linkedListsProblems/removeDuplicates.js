@@ -96,24 +96,49 @@ class SingleLinkedList{
         return removed
     }
 
+//with buffer
+    // removeDups() {
+    //     if (this.head) {
+
+    //         let uniqueVals = {}
+    //         let currentNode = this.head
+            
+    //         for (let i = 1; i <= this.length; i++) {
+    //             if (uniqueVals[currentNode.val]) {
+    //                 this.remove(i - 1)
+    //                 i--
+    //             } else {
+    //                 uniqueVals[currentNode.val] = 1
+    //             }
+    //             currentNode = currentNode.next
+    //         }
+
+    //     } else {
+    //         return
+    //     }
+    // }
+
+//without buffer
     removeDups() {
         if (this.head) {
-
-            let uniqueVals = {}
             let currentNode = this.head
+            let nextNode = currentNode.next
             
             for (let i = 1; i <= this.length; i++) {
-                if (uniqueVals[currentNode.val]) {
-                    this.remove(i - 1)
-                    i--
-                } else {
-                    uniqueVals[currentNode.val] = 1
-                }
+                // for (let j = 1; j <= this.length; j++) {
+                //     if (currentNode.val = nextNode.val){
+                //         this.remove(j-2)
+                //     }
+                //     if(nextNode.next) {
+                //         console.log(nextNode)
+                //         nextNode = nextNode.next
+                //     } else {
+                //         console.log(this.length)
+                //     }
+                // }
+                console.log(currentNode.val)
                 currentNode = currentNode.next
             }
-
-        } else {
-            return
         }
     }
 }
